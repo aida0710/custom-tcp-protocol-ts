@@ -1,0 +1,16 @@
+{
+    "name": "original-protocol",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx tsc && node ./dist/protocol.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^20.11.0",
+        "net": "^1.0.2"
+    }
+}
