@@ -1,6 +1,6 @@
 //protocolの実装
 import * as net from 'net';
-import { Buffer } from 'buffer';
+import {Buffer} from 'buffer';
 
 //名前って思いつかないよね。
 const PROTOCOL_NAME: string = 'aida_proto';
@@ -54,7 +54,13 @@ function createServer(callback: (payload: Buffer) => void): net.Server {
     return server;
 }
 
-// 独自通信プロトコルのクライアント側を作成
+/**
+ * 独自の通信プロトコルのクライアントを作成
+ * @param host
+ * @param port
+ * @param callback
+ * @returns {net.Socket}
+ */
 function createClient(host: string, port: number, callback: (data: Buffer) => void): MySocket {
     const client: net.Socket & MySocket = net.createConnection(port, host) as net.Socket & MySocket;
 
